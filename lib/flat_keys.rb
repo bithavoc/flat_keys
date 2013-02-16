@@ -1,18 +1,6 @@
 require_relative "flat_keys/version"
 
 class Hash
-
-  def visit_flat_keys(hash, prefix, separator)
-    self.each do |k, v|
-      key = "#{prefix}#{k}"
-      if v.is_a?(Hash)
-        v.visit_flat_keys(hash, "#{key}#{separator}", separator)
-      else
-        hash[key] = v
-      end
-    end
-  end
-
   def flat_keys(separator = ".")
     hash = {}
     visit_flat_keys(hash, "", separator)
@@ -37,5 +25,17 @@ class Hash
     hash
   end
 
+  protected
+
+  def visit_flat_keys(hash, prefix, separator)
+    self.each do |k, v|
+      key = "#{prefix}#{k}"
+      if v.is_a?(Hash)
+        v.visit_flat_keys(hash, "#{key}#{separator}", separator)
+      else
+        hash[key] = v
+      end
+    end
+  end
 end
 
