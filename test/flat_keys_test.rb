@@ -15,7 +15,7 @@ describe "flat_keys" do
   end
 
   it "should flat_keys with default separator " do
-    {'a'=>'Letter A', 'name'=>{'fname'=>'John'}}.flat_keys('.').must_equal({'a'=>'Letter A', 'name.fname'=>'John'})
+    {'a'=>'Letter A', 'name'=>{'fname'=>'John'}}.flat_keys.must_equal({'a'=>'Letter A', 'name.fname'=>'John'})
   end
 
 end
@@ -27,7 +27,7 @@ describe "unflat_keys" do
   end
 
   it "should unflat with default separator " do
-    {'a'=>'Letter A', 'name.fname'=>'John'}.unflat_keys('.').must_equal({'a'=>'Letter A', 'name'=>{'fname'=>'John'}} )
+    {'a'=>'Letter A', 'name.fname'=>'John'}.unflat_keys.must_equal({'a'=>'Letter A', 'name'=>{'fname'=>'John'}} )
   end
 
 end

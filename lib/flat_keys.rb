@@ -19,7 +19,7 @@ class Hash
     return hash
   end
 
-  def unflat_keys(separator)
+  def unflat_keys(separator = '.')
     hash = {}
     self.each do |k, v|
       names = k.split(separator)
