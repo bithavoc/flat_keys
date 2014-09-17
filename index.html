@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Flat keys by bithavoc</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Flat keys</h1>
+        <h2>Encodes and Decodes key-value hashes.</h2>
+        <a href="https://github.com/bithavoc/flat_keys" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="flat_keys" class="anchor" href="#flat_keys"><span class="octicon octicon-link"></span></a>flat_keys</h1>
+
+<p>Encodes and Decodes key-value hashes.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add this line to your application's Gemfile:</p>
+
+<pre><code>gem 'flat_keys'
+</code></pre>
+
+<p>And then execute:</p>
+
+<pre><code>$ bundle
+</code></pre>
+
+<p>Or install it yourself as:</p>
+
+<pre><code>$ gem install flat_keys
+</code></pre>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<div class="highlight highlight-ruby"><pre>
+    <span class="nb">require</span> <span class="s1">'flat_keys'</span>
+
+    <span class="p">{</span><span class="s1">'name'</span><span class="o">=&gt;</span><span class="p">{</span><span class="s1">'fname'</span><span class="o">=&gt;</span><span class="s1">'John'</span><span class="p">,</span> <span class="s1">'lname'</span><span class="o">=&gt;</span><span class="s1">'Doe'</span><span class="p">}}</span><span class="o">.</span><span class="n">flat_keys</span>
+    <span class="c1">#=&gt; {'name.fname'=&gt;'John', 'name.lname'=&gt;'Doe'}</span>
+
+    <span class="p">{</span><span class="s1">'name.fname'</span><span class="o">=&gt;</span><span class="s1">'John'</span><span class="p">,</span> <span class="s1">'name.lname'</span><span class="o">=&gt;</span><span class="s1">'Doe'</span><span class="p">}</span><span class="o">.</span><span class="n">unflat_keys</span>
+    <span class="c1">#=&gt; {'name'=&gt;{'fname'=&gt;'John', 'lname'=&gt;'Doe'}}</span>
+</pre></div>
+
+<p>Both <code>flat_keys</code> and <code>unflat_keys</code> can be used with custom separators.</p>
+
+<div class="highlight highlight-ruby"><pre>
+    <span class="p">{</span><span class="s1">'name'</span><span class="o">=&gt;</span><span class="p">{</span><span class="s1">'fname'</span><span class="o">=&gt;</span><span class="s1">'John'</span><span class="p">,</span> <span class="s1">'lname'</span><span class="o">=&gt;</span><span class="s1">'Doe'</span><span class="p">}}</span><span class="o">.</span><span class="n">flat_keys</span><span class="p">(</span><span class="s1">'$'</span><span class="p">)</span>
+    <span class="c1">#=&gt; {'name$fname'=&gt;'John', 'name$lname'=&gt;'Doe'}</span>
+
+</pre></div>
+
+<h2>
+<a name="tests" class="anchor" href="#tests"><span class="octicon octicon-link"></span></a>Tests</h2>
+
+<pre><code>rake
+</code></pre>
+
+<h2>
+<a name="license-mit" class="anchor" href="#license-mit"><span class="octicon octicon-link"></span></a>License (MIT)</h2>
+
+<p>Copyright (c) 2012-2014 Bithavoc.io and Contributors - <a href="http://bithavoc.io">http://bithavoc.io</a></p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/bithavoc/flat_keys/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/bithavoc/flat_keys/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/bithavoc/flat_keys"></a> is maintained by <a href="https://github.com/bithavoc">bithavoc</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-54890957-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
