@@ -6,8 +6,8 @@ require 'flat_keys/version'
 Gem::Specification.new do |gem|
   gem.name          = "flat_keys"
   gem.version       = FlatKeys::VERSION
-  gem.authors       = ["Firebaseco"]
-  gem.email         = ["hello@firebase.co"]
+  gem.authors       = ["bithavoc"]
+  gem.email         = ["im@bithavoc.io"]
   gem.description   = %q{Encodes and Decodes key-value hashes.}
   gem.summary       = %q{Encodes and Decodes key-value hashes.}
   gem.homepage      = ""
