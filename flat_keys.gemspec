@@ -8,9 +8,10 @@ Gem::Specification.new do |gem|
   gem.version       = FlatKeys::VERSION
   gem.authors       = ["bithavoc"]
   gem.email         = ["im@bithavoc.io"]
+  gem.licenses      = ['MIT']
   gem.description   = %q{Encodes and Decodes key-value hashes.}
-  gem.summary       = %q{Encodes and Decodes key-value hashes.}
-  gem.homepage      = ""
+  gem.summary       = %q{Encodes and Decodes key-value hashes, specially useful with PostgreSQL hstore.}
+  gem.homepage      = "http://bithavoc.io/flat_keys"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
